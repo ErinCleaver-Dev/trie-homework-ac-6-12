@@ -1,0 +1,57 @@
+* {
+  font-family: lato;
+  font-size: 1.2rem;
+}
+
+body {
+  background-color: #219ebc;
+  size: 1.5rem;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: Lato;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#title {
+  font-weight: bolder;
+  margin-top: 50px;
+}
+
+#intro {
+  width: 80%;
+  padding-bottom: 16px;
+}
+
+#input {
+  font-family: Lato;
+  margin: 0 auto;
+  border-radius: 50px;
+  width: 80%;
+  padding: 16px 32px;
+  background-color: white;
+  border: none;
+  outline: none;
+}
+
+#results {
+  width: 80%;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.results {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
