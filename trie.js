@@ -93,7 +93,7 @@ export default class Trie {
     let wordList = []
 
     this.getAllWords().forEach(word => {
-      if(word.includes(str)) {
+      if(word.includes(str, pos)) {
         wordList.push(word);
       }
     })

@@ -12,7 +12,7 @@ const trie = new Trie();
 // title case, I made them lowercase before loading them into the  trie.
 const words = countries.map(country => country.name.toLowerCase());
 words.forEach(word => trie.insert(word));
-console.log(trie.autoComplete('Af', 'Af'.length))
+
 /**
  * Helper function to create new <p> elements to be added to
  * the results list.
@@ -35,7 +35,7 @@ input.addEventListener("keyup", ev => {
 console.log(trie.autoComplete(input.value))
   // Iterate through your results, and add them to the #results div.
  // Get a list of countries with the current value of #input.
-  const countriesResults = null //Your Autocomplete function
+  const countriesResults = trie.autoComplete(input.value) //Your Autocomplete function
 
 if (countriesResults.found) {
     countriesResults.found.forEach(country => {
@@ -48,7 +48,8 @@ if (countriesResults.found) {
   // HINT: When setting your  trie.autoComplete(inputStr), you'll need to make sure
   // you make your input string lower case.  inputString.toLowerCase().
   let inputStr = input.value;
-  trie.autoComplete()
+  inputStr = inputStr.toLowerCase()
+  trie.autoComplete(inputStr)
   // HINT: to create a new element, use he newEl() helper function:
   // const el = newEl("String");
 
