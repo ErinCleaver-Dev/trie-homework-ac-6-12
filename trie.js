@@ -88,5 +88,16 @@ export default class Trie {
    * @return {Object} Returns an object where prev is the current string that is
    * being searched and found is the array of matching words
    */
-  autoComplete(str, pos = 0) {}
+  autoComplete(str, pos = 0) {
+
+    let wordList = []
+
+    this.getAllWords().forEach(word => {
+      if(word.includes(str, pos)) {
+        wordList.push();
+      }
+    })
+
+    return wordList;
+  }
 }

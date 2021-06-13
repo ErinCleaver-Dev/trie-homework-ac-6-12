@@ -47,7 +47,8 @@ if (countriesResults.found) {
 
   // HINT: When setting your  trie.autoComplete(inputStr), you'll need to make sure
   // you make your input string lower case.  inputString.toLowerCase().
-
+  let inputStr = input.value;
+  trie.autoComplete()
   // HINT: to create a new element, use he newEl() helper function:
   // const el = newEl("String");
 
