@@ -30,7 +30,7 @@ const newEl = str => {
 input.addEventListener("keyup", ev => {
   // Get a list of countries with the current value of #input.
   console.log(input.value)
-  let inputStr = input.value.toLowerCase()
+  let inputStr = input.innerHTML.toLowerCase()
   // Reset the contents of the #results div.
   // results.innerHTML = "";
   // Iterate through your results, and add them to the #results div.
