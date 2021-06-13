@@ -12,7 +12,7 @@ const trie = new Trie();
 // title case, I made them lowercase before loading them into the  trie.
 const words = countries.map(country => country.name.toLowerCase());
 words.forEach(word => trie.insert(word));
-
+console.log(trie.autoComplete('Af', 'Af'.length))
 /**
  * Helper function to create new <p> elements to be added to
  * the results list.
