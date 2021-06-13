@@ -32,10 +32,11 @@ input.addEventListener("keyup", ev => {
 
   // Reset the contents of the #results div.
   results.innerHTML = "";
-console.log(trie.autoComplete(input.value))
   // Iterate through your results, and add them to the #results div.
  // Get a list of countries with the current value of #input.
-  const countriesResults = trie.autoComplete(input.value) //Your Autocomplete function
+  let inputStr = input.value
+  console.log(inputStr)
+  const countriesResults = trie.autoComplete(inputStr) //Your Autocomplete function
 
 if (countriesResults.found) {
     countriesResults.found.forEach(country => {
@@ -47,9 +48,8 @@ if (countriesResults.found) {
 
   // HINT: When setting your  trie.autoComplete(inputStr), you'll need to make sure
   // you make your input string lower case.  inputString.toLowerCase().
-  let inputStr = input.value;
-  inputStr = inputStr.toLowerCase()
-  trie.autoComplete(inputStr)
+
+
   // HINT: to create a new element, use he newEl() helper function:
   // const el = newEl("String");
 
