@@ -32,7 +32,7 @@ input.addEventListener("keyup", ev => {
   let inputStr = ev.target.value
 
   // Reset the contents of the #results div.
-  results.innerHTML = "";
+  // results.innerHTML = "";
   // Iterate through your results, and add them to the #results div.
  // Get a list of countries with the current value of #input.
   console.log(inputStr)
