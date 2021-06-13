@@ -34,8 +34,8 @@ input.addEventListener("keyup", ev => {
   results.innerHTML = "";
   // Iterate through your results, and add them to the #results div.
  // Get a list of countries with the current value of #input.
-  let inputStr = input.value
-  console.log(inputStr)
+  let inputStr = 
+  console.log(input.value)
   const countriesResults = trie.autoComplete(inputStr) //Your Autocomplete function
 
 if (countriesResults.found) {
