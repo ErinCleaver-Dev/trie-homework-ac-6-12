@@ -3,8 +3,8 @@ import "./style.css";
 import Trie from "./trie";
 import countries from "./countries";
 
-const input = document.getElementById('input')
-//const results = document.getElementById("results");
+const input = document.getElementById("input");
+const results = document.getElementById("results");
 const trie = new Trie();
 
 // Load up the trie with keys frp, the 'words' variable.
@@ -27,17 +27,18 @@ const newEl = str => {
   return p;
 };
 
-input.addEventListener("keyup", ev =>{
+input.addEventListener("keyup", ev => {
+  // Get a list of countries with the current value of #input.
   console.log(input.value)
-});
-
+  let inputStr = input.value.toLowerCase()
   // Reset the contents of the #results div.
   // results.innerHTML = "";
   // Iterate through your results, and add them to the #results div.
  // Get a list of countries with the current value of #input.
+  console.log(trie.autoComplete(inputStr))
  
- // const countriesResults = trie.autoComplete() //Your Autocomplete function
-/*
+  const countriesResults = trie.autoComplete(inputStr) //Your Autocomplete function
+
 if (countriesResults.found) {
     countriesResults.found.forEach(country => {
       const el = newEl(country);
@@ -57,4 +58,5 @@ if (countriesResults.found) {
   // use appendChild(): element.appendChild(childElement)
 
   // HINT: This part was made to stretch your comfort zone a little!   Don't be afraid
-  // to use your resources!*/
+  // to use your resources!
+});
